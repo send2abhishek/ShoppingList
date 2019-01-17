@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Logout"
+        android:id="@+id/activity_main_menu_title"
+        />
+
+    <item android:title="Sort"
+        android:id="@+id/activity_main_sort"
+        android:icon="@mipmap/ic_sort"
+        app:showAsAction="ifRoom" />
+
+</menu>
