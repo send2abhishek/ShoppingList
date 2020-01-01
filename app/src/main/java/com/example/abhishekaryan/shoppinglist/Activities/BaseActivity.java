@@ -1,12 +1,11 @@
 package com.example.abhishekaryan.shoppinglist.Activities;
 
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
 import com.example.abhishekaryan.shoppinglist.Infrastructure.ShoppingListApplication;
 import com.example.abhishekaryan.shoppinglist.Infrastructure.Utils;
 import com.google.firebase.auth.FirebaseAuth;
@@ -42,7 +41,7 @@ public class BaseActivity extends AppCompatActivity {
 
                     FirebaseUser user = firebaseAuth.getCurrentUser();
 
-                    if(user==null){
+                    if(user==null ){
 
 
 //                        SharedPreferences.Editor editor=sharedPreferences.edit();
@@ -56,20 +55,18 @@ public class BaseActivity extends AppCompatActivity {
 //                        finish();
 
 
+
+
                     }
 
                     else {
-                        if(userEmail.equals("")){
-                            SharedPreferences.Editor editor=sharedPreferences.edit();
-                            editor.putString(Utils.USERNAME,null);
-                            editor.putString(Utils.EMAIL,null);
-                            editor.commit();
 
-                            Intent intent=new Intent(getApplicationContext()
-                                    ,LoginActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }
+//                        mauth.signOut();
+//                        Intent intent=new Intent(getApplicationContext()
+//                                ,RegisterActivity.class);
+//                        startActivity(intent);
+//                        finish();
+
                     }
 
                 }

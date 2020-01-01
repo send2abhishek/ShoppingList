@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class addFrndListViewHolder extends RecyclerView.ViewHolder {
 
     private TextView userAddEmail;
-    private ImageView addItemView;
+    public ImageView addItemView;
     public addFrndListViewHolder(View itemView) {
         super(itemView);
 
@@ -25,32 +25,14 @@ public class addFrndListViewHolder extends RecyclerView.ViewHolder {
     }
 
 
-    public void populate(final user currentUser, final String CurrentUserEmail, final Context context){
+    public void populate(user currentUser){
+
+        itemView.setTag(currentUser);
 
 
         userAddEmail.setText(currentUser.getEmail());
-        addItemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if(CurrentUserEmail.equals(currentUser.getEmail())){
-
-                    Toast.makeText(context,"You cannnot add yourself to frnd",Toast.LENGTH_SHORT).show();
-                }
-                else {
-
-                    DatabaseReference reference=FirebaseDatabase.getInstance()
-                            .getReferenceFromUrl(Utils.FIREBASE_ADD_FRND_REFERNCE + Utils.encodeEmail(CurrentUserEmail)
-                            + "/" + Utils.encodeEmail(currentUser.getEmail()));
 
 
-                    reference.setValue(currentUser);
 
-                    addItemView.setImageResource(R.mipmap.ic_bought);
-
-
-                }
-            }
-        });
     }
 }

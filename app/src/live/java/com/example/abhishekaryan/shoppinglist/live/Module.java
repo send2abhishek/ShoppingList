@@ -9,5 +9,6 @@ public class Module {
         new LiveAccountService(application);
         new LiveShoppingListService(application);
         new LiveAddItemService(application);
+        new LiveUsersService(application);
     }
 }

@@ -11,7 +11,7 @@ import android.support.annotation.Nullable;
 import com.example.abhishekaryan.shoppinglist.Infrastructure.Utils;
 import com.example.abhishekaryan.shoppinglist.R;
 
-public class SettingsActivity extends PreferenceActivity {
+public class SettingsActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

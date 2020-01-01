@@ -59,12 +59,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             editor.putString(Utils.USERNAME, null);
             editor.putString(Utils.EMAIL, null);
             editor.commit();
-
+            Toast.makeText(MainActivity.this,"User is null",Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getApplicationContext()
                     , LoginActivity.class);
             startActivity(intent);
             finish();
         }
+
         floatingActionButton=(FloatingActionButton)findViewById(R.id.activity_main_floating_btn);
         floatingActionButton.setOnClickListener(this);
         recyclerView=(RecyclerView)findViewById(R.id.activity_main_recylerView);
